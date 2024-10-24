@@ -13,5 +13,16 @@ public class Aims {
 
         // print total cost of all items in the cart
         System.out.println("Total cost of all items in cart: " + anOrder.totalCost());
+        
+        // check the remove
+        anOrder.removeDigitalVideoDisc(dvd2);
+        
+        //total cost after removing 
+        System.out.println("Total cost after removing Star Wars: " +anOrder.totalCost());
+        
+        // Check the left
+        for (int i=0; i< anOrder.getQtyOrdered();i++) {
+        	System.out.println("DVD whichs still in the cart: " + anOrder.getItemsOrdered()[i].getTitle());
+        }
     }
 }
