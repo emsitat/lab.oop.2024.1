@@ -1,0 +1,35 @@
+Is JAVA a Pass by Value or a Pass by Reference programming language?
+- Java is a Pass by value, let's me give an example: 
+
+public class Test {
+    public static void main(String[] args) {
+        int a = 5;
+        modify(a);
+        System.out.println(a); 
+    }
+
+    public static void modify(int x) {
+        x = 100; 
+    }
+}
+=>> it will print out 5 
+
+class Person {
+    String name;
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Person p = new Person();
+        p.name = "Tuấn";
+        modifyObject(p);
+        System.out.println(p.name); 
+    }
+
+    public static void modifyObject(Person obj) {
+        obj.name = "Bob";
+    }
+}
+=>> it will print out Bob 
+
+Therefore, for primitive data, Java would just passes a copy of the value to the method, and for objects, Java passes a copy of the reference to the objject, not the real object.
